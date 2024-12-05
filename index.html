@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning">
+  <meta name="keywords" content="TidyBot++, robotics, robot learning, mobile manipulation, imitation learning, holonomic drive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning">
+  <meta property="og:description" content="TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tidybot2.github.io/">
+  <meta property="og:image" content="https://tidybot2.github.io/images/og-image.jpg">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBGQBQD9W5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NBGQBQD9W5');
+  </script>
+
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning</h1>
+
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://jimmyyhwu.github.io/">Jimmy Wu</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/williamchong31">William Chong</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://robotics.stanford.edu/~rah/">Robert Holmberg</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://aaditya-prasad.github.io/">Aaditya Prasad</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yihuai-gao.github.io/">Yihuai Gao</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://khatib.stanford.edu/">Oussama Khatib</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://shurans.github.io/">Shuran Song</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.cs.princeton.edu/~smr/">Szymon Rusinkiewicz</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://web.stanford.edu/~bohg/">Jeannette Bohg</a><sup>2</sup>
+                </span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Princeton University</span>
+                &nbsp;&nbsp;
+                <span class="author-block"><sup>2</sup>Stanford University</span>
+                &nbsp;&nbsp;
+                <span class="author-block"><sup>3</sup>Dexterity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.10447"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://tidybot2.github.io/docs"
+                   class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-tools"></i>
+                    </span>
+                    <span>Assembly Guide</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://tidybot2.github.io/docs/usage"
+                   class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-book"></i>
+                    </span>
+                    <span>Usage Guide</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/jimmyyhwu/tidybot2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/6MH7dhyIUdQ"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-multiline is-centered has-text-centered">
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0645-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Open fridge</p>
+        </div>
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0661-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Wipe countertop</p>
+        </div>
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0598-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Load dishwasher</p>
+        </div>
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0616-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Take out trash</p>
+        </div>
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0764-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Water plant</p>
+        </div>
+        <div class="column is-one-third">
+          <video src="videos/autonomous/IMG_0563-2x.mp4" controls autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+          <p>Load laundry</p>
+        </div>
+        <div class="column">
+          <p>Above videos show TidyBot++ running fully autonomous <a href="https://diffusion-policy.cs.columbia.edu">diffusion policy</a> rollouts in a real apartment home (2x speed).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Exploiting the promise of recent advances in imitation learning for mobile manipulation will require the collection of large numbers of human-guided demonstrations. This paper proposes an open-source design for an inexpensive, robust, and flexible mobile manipulator that can support arbitrary arms, enabling a wide range of real-world household mobile manipulation tasks. Crucially, our design uses powered casters to enable the mobile base to be fully holonomic, able to control all planar degrees of freedom independently and simultaneously. This feature makes the base more maneuverable and simplifies many mobile manipulation tasks, eliminating the kinematic constraints that create complex and time-consuming motions in nonholonomic bases. We equip our robot with an intuitive mobile phone teleoperation interface to enable easy data acquisition for imitation learning. In our experiments, we use this interface to collect data and show that the resulting learned policies can successfully perform a variety of common household mobile manipulation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- Teleoperated Tasks -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title">Teleoperated Tasks</h2>
+        <p>Through teleoperation, TidyBot++ can perform a wide range of common household tasks in a real home (4x speed).</p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-centered has-text-centered">
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4152-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Unload oven</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4161-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Set the table</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4175-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up kitchen</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4149-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Fill watering can</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4135-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up foyer</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4037-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up bedroom</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4067-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up bedroom</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4101-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Enter bathroom</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4105-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up countertop</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4108-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Tidy up countertop</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4126-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Wipe countertop</p>
+      </div>
+      <div class="column is-one-quarter">
+        <video data-src="videos/teleop/IMG_4129-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Scrub bathtub</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Phone Teleoperation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title">Phone Teleoperation</h2>
+        <p>We open source our intuitive phone teleoperation interface, shown in action below (4x speed).</p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <video data-src="videos/IMG_0781-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Holonomic Drive -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title">Holonomic vs. Differential Drive</h2>
+        <p>Using a holonomic mobile base simplifies teleoperation and policy learning. See comparison (4x speed) below.</p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half">
+        <video data-src="videos/IMG_0768-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Differential drive base</p>
+      </div>
+      <div class="column is-half">
+        <video data-src="videos/IMG_0647-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Holonomic base</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hardware Specifications -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title">Hardware Specifications</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="subtitle">Swappable Arm</h3>
+        <p>We provide several highly-customizable reference robot designs which can be easily modified to support different arms.</p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-mobile has-text-centered">
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1012001.jpg">
+        <p>Kinova</p>
+      </div>
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1012027.jpg">
+        <p>Franka</p>
+      </div>
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1011970.jpg">
+        <p>ARX5</p>
+      </div>
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1011966.jpg">
+        <p>xArm</p>
+      </div>
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1012017.jpg">
+        <p>UR5</p>
+      </div>
+      <div class="column is-one-sixth is-one-third-mobile">
+        <img src="images/P1011997.jpg">
+        <p>ViperX</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="subtitle">Payload</h3>
+        <p>Though designed to carry just one arm, we found that our mobile base can also handle much higher payloads with ease.</p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_3642.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Weight plates totaling ~270 lb (120 kg)</p>
+      </div>
+      <div class="column is-one-third">
+        <video  data-src="videos/specs/IMG_0977.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Five arms totaling ~200 lb (90 kg)</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8800.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Passenger weighing ~150 lb (70 kg)</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="subtitle">Traversability</h3>
+        <p>Our mobile base works on a variety of floor surfaces ranging from hard floor to high-pile carpet, and can traverse many common floor obstacles. Though intended for indoor use, we found that it can handle some outdoor floor obstacles as well.</p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-centered has-text-centered">
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8794.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Door thresholds</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8821.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Elevator gaps</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8782.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Speed bumps</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8817.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Steel construction plates</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8795.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Asphalt curb ramps</p>
+      </div>
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_8785.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+        <p>Loading ramps (6.5&deg; inclination)</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="subtitle">Odometry</h3>
+        <p>
+          We evaluated the odometry accuracy by driving our mobile base along a random trajectory and comparing the odometry data (dashed blue line) with motion capture (black line).
+          The results show translation drift of less than 1 cm per meter of distance traveled, and rotation drift of less than 1&deg; per 360&deg; of rotation.
+        </p>
+      </div>
+    </div>
+    <div class="columns has-text-centered">
+      <div class="column is-two-thirds">
+        <video data-src="videos/specs/IMG_7316.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="subtitle">Repeatability</h3>
+        <p>
+          One advantage of a holonomic mobile base is that it can be directly controlled in position mode, leading to high repeatability.
+          To test this, we recorded the demonstration shown below (4x speed) for the <em>push chairs</em> task and replayed it 10 times.
+          We found that simple open-loop replay from a fixed initial configuration achieves 10/10 success for this task.
+        </p>
+      </div>
+    </div>
+    <div class="columns has-text-centered">
+      <div class="column is-one-third">
+        <video data-src="videos/specs/IMG_7430-4x.mp4" controls autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/6MH7dhyIUdQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Poster</h2>
+        <a href="poster.pdf">
+          <span class="image fit" style="border: 1px solid; border-color: #888888;">
+            <img src="images/poster-thumbnail.jpg">
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Acknowledgments -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title has-text-centered">Acknowledgments</h2>
+        <p class="has-text-justified">
+          We would like to thank Kevin Zakka, Yixuan Huang, Kevin Lin, Zi-ang Cao, Jingyun Yang, Rika Antonova, Marion Lepert, Sophie Lueth, Haoyu Xiong, Huy Ha, Cheng Chi, Philipp Wu, Fred Shentu, and Zhongke Yi for fruitful technical discussions.
+          We thank Rajat Kumar Jenamani, Rishabh Madan, and the Cornell EmPRISE Lab for open sourcing their compliant controller for the Kinova arm.
+          We would also like to thank Zi-ang Cao, Rika Antonova, Haoyu Xiong, Suvir Mirchandani, Matt Strong, Wesley Guo, and Claire Chen for extensive hardware assistance, as well as Stanford ILIAD, Stanford ARMLab, Rika Antonova, and Zipeng Fu for lending hardware.
+          We are especially grateful towards the FIRST Robotics Competition (FRC) community for developing the rich ecosystem that made this project feasible.
+          For extensive product and logistics support, we would like to thank Mandy Gove, Cory Ness, Omar Zrien, Jacob Caporuscio, and Dalton Smith from CTR Electronics; Ranjit Chahal and Harvey Rico from WestCoast Products; and John Rigsby from Swerve Drive Specialties.
+          The work was supported in part by the Stanford Institute for Human-Centered Artificial Intelligence (HAI), Princeton School of Engineering, the Sloan Foundation, and the National Science Foundation under ECCS-2143601.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{wu2024tidybot,
+  title = {TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning},
+  author = {Wu, Jimmy and Chong, William and Holmberg, Robert and Prasad, Aaditya and Gao, Yihuai and Khatib, Oussama and Song, Shuran and Rusinkiewicz, Szymon and Bohg, Jeannette},
+  booktitle = {Conference on Robot Learning},
+  year = {2024}
+}</code></pre>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+          <p>Website template borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
